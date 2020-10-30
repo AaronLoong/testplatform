@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c6c9a9-91bf-413d-a8f4-78b24113630c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apitest/templates/api_library.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apitest/templates/case_library.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apitest/templates/project_settings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apitest/static/css/apitest-base.css" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/static/css/apitest-base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apitest/templates/project_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/templates/project_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apitest/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testplatform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/testplatform/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apitest/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/admin.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +37,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
@@ -330,16 +325,20 @@
     </state>
     <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1603261643620" />
     <state width="1398" height="335" key="GridCell.Tab.1.right/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603333015686" />
+    <state x="456" y="177" key="RollbackChangesDialog" timestamp="1604028185901">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="456" y="177" key="RollbackChangesDialog/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1604028185901" />
     <state x="211" y="116" key="SettingsEditor" timestamp="1603981288814">
       <screen x="0" y="23" width="1440" height="840" />
     </state>
     <state x="186" y="162" key="SettingsEditor/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1603877737372" />
     <state x="186" y="162" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1603980445002" />
     <state x="211" y="116" key="SettingsEditor/0.23.1440.840@0.23.1440.840" timestamp="1603981288814" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1604021517207">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1604028199955">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1604021517207" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1604028199955" />
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603095512557" />
     <state x="320" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603441017679" />
     <state x="320" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.840@0.23.1440.840" timestamp="1603983514653" />
