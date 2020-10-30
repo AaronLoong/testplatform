@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3c6c9a9-91bf-413d-a8f4-78b24113630c" name="Default Changelist" comment="" />
+    <list default="true" id="a3c6c9a9-91bf-413d-a8f4-78b24113630c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +37,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
@@ -340,10 +343,10 @@
     <state x="186" y="162" key="SettingsEditor/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1603877737372" />
     <state x="186" y="162" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1603980445002" />
     <state x="211" y="116" key="SettingsEditor/0.23.1440.840@0.23.1440.840" timestamp="1603981288814" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1604028230119">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1604038129651">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1604028230119" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1604038129651" />
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603095512557" />
     <state x="320" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603441017679" />
     <state x="320" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.840@0.23.1440.840" timestamp="1603983514653" />
