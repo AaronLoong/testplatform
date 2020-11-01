@@ -5,5 +5,3 @@ from apitest.models import *
 admin.site.register(tucao)
 admin.site.register(home_link)
 admin.site.register(project)
-
-

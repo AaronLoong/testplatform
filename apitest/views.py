@@ -22,7 +22,7 @@ def child(request, eid, oid):
     return render(request, eid, res)
 
 
-# 控制不同的页面返回不同的数据：数据分发器
+# 控制不同页面返回不同的数据：数据分发器
 def child_json(eid, oid=''):
     res = {}
     if eid == 'Home.html':
@@ -32,8 +32,14 @@ def child_json(eid, oid=''):
         date = project.objects.all()
         res = {"projects": date}
     elif eid == 'api_library.html':
-        project_name = project.objects.filter(id=oid)[0]
-        res = {"project_name": project_name}
+        all_project = project.objects.filter(id=oid)[0]
+        res = {"project": all_project}
+    elif eid == 'case_library.html':
+        all_project = project.objects.filter(id=oid)[0]
+        res = {"project": all_project}
+    elif eid == 'project_settings.html':
+        all_project = project.objects.filter(id=oid)[0]
+        res = {"project": all_project}
     return res
 
 
@@ -72,8 +78,6 @@ def logout(request):
 def login_action(request):
     username = request.GET['username']
     password = request.GET['password']
-    print(username, password)
-
     from django.contrib import auth
     user = auth.authenticate(username=username, password=password)
     if user is not None:
@@ -121,9 +125,9 @@ def to_apis_library(request, id):
 
 def to_cases_library(request, id):
     project_id = id
-    return render(request, 'welcome.html', {"whichHTML": "case_library.html", "oid": ""})
+    return render(request, 'welcome.html', {"whichHTML": "case_library.html", "oid": project_id})
 
 
 def to_project_settings(request, id):
     project_id = id
-    return render(request, 'welcome.html', {"whichHTML": "project_settings.html", "oid": ""})
+    return render(request, 'welcome.html', {"whichHTML": "project_set.html", "oid": project_id})

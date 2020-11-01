@@ -38,6 +38,6 @@ urlpatterns = [
     path('delete_project/', delete_project),
     path('add_project/', add_project),
     re_path(r'^apis/(?P<id>.*)$', to_apis_library),
-    re_path(r'^apis/(?P<id>.*)$', to_cases_library),
-    re_path(r'^apis/(?P<id>.*)$', to_project_settings),
+    re_path(r'^cases/(?P<id>.*)$', to_cases_library),
+    re_path(r'^project_set/(?P<id>.*)$', to_project_settings),
 ]

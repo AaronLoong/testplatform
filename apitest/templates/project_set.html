@@ -2,13 +2,9 @@
 <html lang="zh_CN">
 <head>
     <meta charset="UTF-8">
-    <title>测试用例</title>
+    <title>项目设置</title>
 </head>
 <body>
-    <div style="text-align: center">
-        <h2>用例库： <span style="color: #ff607c">{{ all_project.project_name }}</span></h2>
-    </div>
-
     <nav class="navbar navbar-default" role="navigation" style="position: absolute;top: 0;left: 80px;width: -webkit-calc(100% - 200px);z-index: 1">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -18,8 +14,8 @@
             <div>
                 <ul class="nav navbar-nav">
                     <li><a href="/apis/{{ all_project.id }}">接口库</a></li>
-                    <li class="active"><a href="/cases/{{ all_project.id }}">用例库</a></li>
-                    <li><a href="/project_set/{{ all_project.id }}">项目设置</a></li>
+                    <li><a href="/cases/{{ all_project.id }}">用例库</a></li>
+                    <li class="active"><a href="/project_set/{{ all_project.id }}">项目设置</a></li>
                 </ul>
             </div>
         </div>
