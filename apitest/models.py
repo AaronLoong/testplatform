@@ -25,7 +25,7 @@ class User(models.Model):
 		verbose_name_plural = '用户'
 
 
-class tucao(models.Model):
+class Tucao(models.Model):
 	user = models.CharField(max_length=16, null=True)
 	text = models.CharField(max_length=1024, null=True)
 	ctime = models.DateTimeField(auto_now=True)
@@ -34,7 +34,7 @@ class tucao(models.Model):
 		return self.text + str(self.ctime)
 
 
-class home_link(models.Model):
+class Home_link(models.Model):
 	link_name = models.CharField(max_length=50, null=True, help_text='超链接名称')
 	link_content = models.CharField(max_length=1024, null=True, help_text='超链接内容')
 
@@ -42,7 +42,7 @@ class home_link(models.Model):
 		return self.link_name
 
 
-class project(models.Model):
+class Project(models.Model):
 	project_name = models.CharField(max_length=1000, null=True, verbose_name='项目名称')
 	project_remark = models.CharField(max_length=1000, null=True, verbose_name='项目备注')
 	project_build_user = models.CharField(max_length=256, null=True, verbose_name='项目创建者名称')

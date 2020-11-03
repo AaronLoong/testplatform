@@ -8,17 +8,43 @@
     <nav class="navbar navbar-default" role="navigation" style="position: absolute;top: 0;left: 80px;width: -webkit-calc(100% - 200px);z-index: 1">
         <div class="container-fluid">
             <div class="navbar-header">
-                <span style="font-size: xx-small" class="navbar-brand">项目名称：{{ all_project.project_name }}</span>
+                <span style="font-size: xx-small" class="navbar-brand">项目名称：{{ project.project_name }}</span>
                 <a class="navbar-brand" href="/project_list/">返回项目列表</a>
             </div>
             <div>
                 <ul class="nav navbar-nav">
-                    <li><a href="/apis/{{ all_project.id }}">接口库</a></li>
-                    <li><a href="/cases/{{ all_project.id }}">用例库</a></li>
-                    <li class="active"><a href="/project_set/{{ all_project.id }}">项目设置</a></li>
+                    <li><a href="/apis/{{ project.id }}">接口库</a></li>
+                    <li><a href="/cases/{{ project.id }}">用例库</a></li>
+                    <li class="active"><a href="/project_set/{{ project.id }}">项目设置</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+    <br><br>
+    <div style="text-align: center">
+        <h3>项目名称</h3>
+        <textarea name="" id="project_name" placeholder="最大100字" style="width: 70%" rows="4">{{ project.project_name }}</textarea><br>
+        <h3>项目描述</h3>
+        <textarea name="" id="project_remark" placeholder="最大五百字" style="width: 70%" rows="4">{{ project.project_remark }}</textarea><br>
+        <h3>其他管理员</h3>
+        <textarea name="" id="project_other_user" placeholder="多个成员间用英文逗号,隔开" style="width: 70%" rows="4">{{ project.project_other_user }}</textarea><br>
+    </div>
+    <br><br>
+    <button onclick="save()" type="button" style="margin-left: 15%;width: 70%" class="btn btn-primary btn-lg btn-block">保存</button>
+
+    <script>
+        function save() {
+            let project_name = document.getElementById('project_name').value;
+            let project_remark = document.getElementById('project_remark').value;
+            let project_other_user = document.getElementById('project_other_user').value;
+            $.get('/save_project_set/' + '{{ project.id }}' + '/', {
+                'project_name': project_name,
+                'project_remark': project_remark,
+                'project_other_user': project_other_user,
+            }, function (ret) {
+                alert('保存成功')
+            })
+        }
+    </script>
 </body>
 </html>

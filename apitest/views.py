@@ -26,20 +26,21 @@ def child(request, eid, oid):
 def child_json(eid, oid=''):
     res = {}
     if eid == 'Home.html':
-        date = home_link.objects.all()
+        date = Home_link.objects.all()
         res = {"links": date}
     elif eid == 'project_list.html':
-        date = project.objects.all()
+        date = Project.objects.all()
         res = {"projects": date}
     elif eid == 'api_library.html':
-        all_project = project.objects.filter(id=oid)[0]
-        res = {"project": all_project}
+        project_name = Project.objects.filter(id=oid)[0]
+        print(project_name)
+        res = {"project": project_name}
     elif eid == 'case_library.html':
-        all_project = project.objects.filter(id=oid)[0]
-        res = {"project": all_project}
-    elif eid == 'project_settings.html':
-        all_project = project.objects.filter(id=oid)[0]
-        res = {"project": all_project}
+        project_name = Project.objects.filter(id=oid)[0]
+        res = {"project": project_name}
+    elif eid == 'project_set.html':
+        project_name = Project.objects.filter(id=oid)[0]
+        res = {"project": project_name}
     return res
 
 
@@ -60,7 +61,7 @@ def register(request):
 
 def tucao(request):
     tucao_text = request.GET['tucao_text']
-    tucao.objects.create(user=request.user.username, text=tucao_text)
+    Tucao.objects.create(user=request.user.username, text=tucao_text)
     return HttpResponse('')
 
 
@@ -108,13 +109,13 @@ def project_list(request):
 
 def delete_project(request):
     project_id = request.GET['id']
-    project.objects.filter(id=project_id).delete()
+    Project.objects.filter(id=project_id).delete()
     return HttpResponse('')
 
 
 def add_project(request):
     project_name = request.GET['project_name']
-    project.objects.create(project_name=project_name, project_remark='', project_build_user=request.user.username, project_build_other_user='')
+    Project.objects.create(project_name=project_name, project_remark='', project_build_user=request.user.username, project_build_other_user='')
     return HttpResponse('')
 
 
@@ -128,6 +129,17 @@ def to_cases_library(request, id):
     return render(request, 'welcome.html', {"whichHTML": "case_library.html", "oid": project_id})
 
 
-def to_project_settings(request, id):
+def to_project_set(request, id):
     project_id = id
     return render(request, 'welcome.html', {"whichHTML": "project_set.html", "oid": project_id})
+
+
+def save_project_set(request, id):
+    """ 保存项目设置 """
+    project_id = id
+    project_name = request.GET['project_name']
+    project_remark = request.GET['project_remark']
+    project_other_user = request.GET['project_other_user']
+    # 更新数据库
+    Project.objects.filter(id=project_id).update(project_name=project_name, project_remark=project_remark, project_build_other_user=project_other_user)
+    return HttpResponse('')
