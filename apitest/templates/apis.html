@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>接口测试</title>
+</head>
+<body>
+    <div style="text-align: center">
+        <h2 style="margin-top: 50px">接口库： <span style="color: #ff607c">{{ project.project_name }}</span></h2>
+    </div>
+
+    <nav class="navbar navbar-default" role="navigation" style="position: absolute;top: 0;left: 80px;width: -webkit-calc(100% - 200px);z-index: 1">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <span style="font-size: xx-small" class="navbar-brand">项目名称：{{ project.project_name }}</span>
+                <a class="navbar-brand" href="/project_list/">返回项目列表</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/apis/{{ project.id }}">接口库</a></li>
+                    <li><a href="/cases/{{ project.id }}">用例库</a></li>
+                    <li><a href="/project_set/{{ project.id }}">项目设置</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br><br>
+    <table class="table table-active">
+        <thead>
+            <tr>
+                <th>id</th> <th style="width: 20%">接口名称</th> <th style="width: 20%">接口Host</th> <th style="width: 20%">接口地址</th> <th style="width: auto">请求方式</th><th style="width: auto">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in apis %}
+                <tr>
+                    <td>{{ i.id }}</td> <td>{{ i.api_name }}</td> <td>{{ i.api_host }}</td> <td>{{ i.api_url }}</td> <td>{{ i.api_method }}</td> <td>
+                    <button onclick="" class="btn btn-success">调试</button>
+                    <button class="btn btn-info">备注</button>
+                    <button class="btn btn-info">复制</button>
+                    <button class="btn btn-info">异常值测试</button>
+                    <button onclick="" class="btn btn-danger">删除</button></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div style="position: fixed;bottom: 0;width: 100%;background-color: #f8f8f8;text-align: center;border: 1px solid #e7e7e7">
+        <div class="btn btn-group">
+            <button type="button" class="btn btn-primary">新增接口</button>
+            <button type="button" class="btn btn-default">全局请求头</button>
+            <button type="button" class="btn btn-default">全局域名</button>
+            <button type="button" class="btn btn-default">接口文档导入</button>
+            <button type="button" class="btn btn-default">抓包导入</button>
+            <button type="button" class="btn btn-default">加密算法</button>
+            <button type="button" class="btn btn-default">登录态接口</button>
+        </div>
+    </div>
+</body>
+</html>

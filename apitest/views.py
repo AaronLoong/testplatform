@@ -16,14 +16,14 @@ def default(request):
     return HttpResponse("火星人~~ 欢迎来到地球！！😋")
 
 
-# 返回子页面
 def child(request, eid, oid):
+    """ 返回子页面 """
     res = child_json(eid, oid)
     return render(request, eid, res)
 
 
-# 控制不同页面返回不同的数据：数据分发器
 def child_json(eid, oid=''):
+    """ 控制不同页面返回不同的数据：数据分发器 """
     res = {}
     if eid == 'Home.html':
         date = Home_link.objects.all()
@@ -31,11 +31,12 @@ def child_json(eid, oid=''):
     elif eid == 'project_list.html':
         date = Project.objects.all()
         res = {"projects": date}
-    elif eid == 'api_library.html':
+    elif eid == 'apis.html':
         project_name = Project.objects.filter(id=oid)[0]
-        print(project_name)
-        res = {"project": project_name}
-    elif eid == 'case_library.html':
+        apis = Apis.objects.filter(project_id=oid)
+        print(apis)
+        res = {"project": project_name, 'apis': apis}
+    elif eid == 'cases.html':
         project_name = Project.objects.filter(id=oid)[0]
         res = {"project": project_name}
     elif eid == 'project_set.html':
@@ -69,8 +70,8 @@ def p_help(request):
     return render(request, 'welcome.html', {"whichHTML": "help.html", "oid": ""})
 
 
-# 退出登录
 def logout(request):
+    """ 退出登录 """
     from django.contrib import auth
     auth.logout(request)
     return HttpResponseRedirect('/login/')
@@ -121,12 +122,12 @@ def add_project(request):
 
 def to_apis_library(request, id):
     project_id = id
-    return render(request, 'welcome.html', {"whichHTML": "api_library.html", "oid": project_id})
+    return render(request, 'welcome.html', {"whichHTML": "apis.html", "oid": project_id})
 
 
 def to_cases_library(request, id):
     project_id = id
-    return render(request, 'welcome.html', {"whichHTML": "case_library.html", "oid": project_id})
+    return render(request, 'welcome.html', {"whichHTML": "cases.html", "oid": project_id})
 
 
 def to_project_set(request, id):
