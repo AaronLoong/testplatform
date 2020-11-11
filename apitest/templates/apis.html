@@ -37,18 +37,62 @@
                 <tr>
                     <td>{{ i.id }}</td> <td>{{ i.api_name }}</td> <td>{{ i.api_host }}</td> <td>{{ i.api_url }}</td> <td>{{ i.api_method }}</td> <td>
                     <button onclick="" class="btn btn-success">调试</button>
-                    <button class="btn btn-info">备注</button>
+                    <button onclick="open_comment('{{ i.id }}')" class="btn btn-info">备注</button>
                     <button class="btn btn-info">复制</button>
                     <button class="btn btn-info">异常值测试</button>
-                    <button onclick="" class="btn btn-danger">删除</button></td>
+                    <button onclick="document.location.href='/project_api_del/{{ i.id }}/'" class="btn btn-danger">删除</button></td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
 
+    <div id="comment" style="width: 50%;height: 30%;position: fixed;left: 25%;top: 35%;background-color: #3c4043;box-shadow: 4px 4px 8px grey;display: none">
+        <input id="which_api" type="text" style="display: none">
+        <textarea name="" id="comment_value" style="width: 100%;height: 80%" placeholder="请输入该接口的备注"></textarea>
+        <button onclick="save_comment()" class="btn btn-success" style="width: 49.9%;height: 20%">保存</button>
+        <button onclick="cancel_comment()" class="btn btn-danger" style="width: 49.3%;height: 20%">取消</button>
+    </div>
+
+    <div id="debug" style="border-radius: 5px;width: 80%;height: 80%;position: fixed;left: 10%;top: 10%;background-color: #3c4043;box-shadow: 4px 4px 8px grey;color: white;padding-left: 10px">
+        <div class="btn-group" style="float: right">
+            <button class="btn btn-success">保存</button>
+            <button class="btn btn-danger">取消</button>
+        </div>
+        <h3>接口：<small></small><small></small></h3>
+        <ul class="nav navbar-nav" style="width: 90%">
+            <li>
+                <select class="form-control" style="height: 40px">
+                    <option value="none">请求方式</option>
+                    <option value="post">POST</option>
+                    <option value="get">GET</option>
+                    <option value="put">PUT</option>
+                    <option value="delete">DELETE</option>
+                </select>
+            </li>
+            <li style="width: -webkit-calc(100% - 225px)">
+                <input style="padding-left: 10px;width: 100%;height: 40px" type="text" placeholder="url, 如：/abc/ad/" value="">
+            </li>
+            <li>
+                <button type="button" style="height: 40px;width: 120px;" class="btn btn-default">
+                    <span style="font-size: large">Send</span>
+                </button>
+            </li>
+        </ul>
+        <br><br><br>
+        <ul class="nav navbar-nav" style="width: 98%">
+            <li>
+
+            </li>
+
+
+        </ul>
+
+
+    </div>
+
     <div style="position: fixed;bottom: 0;width: 100%;background-color: #f8f8f8;text-align: center;border: 1px solid #e7e7e7">
         <div class="btn btn-group">
-            <button type="button" class="btn btn-primary">新增接口</button>
+            <button type="button" class="btn btn-primary" onclick="document.location.href='/project_api_add/{{ project.id }}/'">新增接口</button>
             <button type="button" class="btn btn-default">全局请求头</button>
             <button type="button" class="btn btn-default">全局域名</button>
             <button type="button" class="btn btn-default">接口文档导入</button>
@@ -56,6 +100,32 @@
             <button type="button" class="btn btn-default">加密算法</button>
             <button type="button" class="btn btn-default">登录态接口</button>
         </div>
-    </div>
+    </div> 
+    
+    <script>
+        function open_comment(id) {   //打开评论内容输入栏
+            document.getElementById('comment_value').value = '';
+            $.get('/get_comment/', {
+                'api_id': id,
+            }, function (ret){
+                document.getElementById('comment').style.display = 'block';
+                document.getElementById('which_api').value = id;
+                document.getElementById('comment_value').value = ret;
+            })
+        }
+        function cancel_comment() {  //取消评论
+            document.getElementById('comment').style.display = 'none';
+        }
+        function save_comment() {  //保存评论
+            let id = document.getElementById('which_api').value;
+            let comment_value = document.getElementById('comment_value').value;
+            $.get('/save_comment/', {
+                'api_id': id,
+                'comment_value': comment_value
+            }, function (ret){
+                document.getElementById('comment').style.display = 'none'
+            })
+        }
+    </script>
 </body>
 </html>

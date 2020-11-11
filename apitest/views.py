@@ -34,7 +34,6 @@ def child_json(eid, oid=''):
     elif eid == 'apis.html':
         project_name = Project.objects.filter(id=oid)[0]
         apis = Apis.objects.filter(project_id=oid)
-        print(apis)
         res = {"project": project_name, 'apis': apis}
     elif eid == 'cases.html':
         project_name = Project.objects.filter(id=oid)[0]
