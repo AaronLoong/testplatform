@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c6c9a9-91bf-413d-a8f4-78b24113630c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apitest/static/201801271505/css/htmleaf-demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apitest/static/201801271505/css/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apitest/static/201801271505/fonts/icomoon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apitest/static/201801271505/fonts/icomoon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apitest/static/201801271505/fonts/icomoon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apitest/static/201801271505/fonts/icomoon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apitest/static/201801271505/js/bootstable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apitest/static/201801271505/js/jquery-1.11.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apitest/static/201801271505/related/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apitest/static/201801271505/related/2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apitest/static/js/apitest-base.js" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/static/js/apis.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apitest/templates/apis.html" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/templates/apis.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -186,7 +177,7 @@
       <workItem from="1604293836533" duration="6336000" />
       <workItem from="1604584410002" duration="7760000" />
       <workItem from="1604994551929" duration="8884000" />
-      <workItem from="1605161011908" duration="2703000" />
+      <workItem from="1605161011908" duration="7286000" />
     </task>
     <task id="LOCAL-00001" summary="testplatform init 01">
       <created>1603020258946</created>
@@ -307,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605147140587</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="testplatform init 18">
+      <created>1605168669710</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1605168669710</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,7 +329,8 @@
     <MESSAGE value="testplatform init 15" />
     <MESSAGE value="testplatform init 16" />
     <MESSAGE value="testplatform init 17" />
-    <option name="LAST_COMMIT_MESSAGE" value="testplatform init 17" />
+    <MESSAGE value="testplatform init 18" />
+    <option name="LAST_COMMIT_MESSAGE" value="testplatform init 18" />
   </component>
   <component name="WindowStateProjectService">
     <state x="354" y="135" key="#Inspections" timestamp="1603351266777">
@@ -347,10 +346,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="464" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1604417355822" />
-    <state x="314" y="44" key="CommitChangelistDialog2" timestamp="1605147140396">
+    <state x="314" y="44" key="CommitChangelistDialog2" timestamp="1605168669534">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="314" y="44" key="CommitChangelistDialog2/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605147140396" />
+    <state x="314" y="44" key="CommitChangelistDialog2/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605168669534" />
     <state x="314" y="44" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1604672345223" />
     <state x="314" y="51" key="CommitChangelistDialog2/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603441013909" />
     <state x="314" y="51" key="CommitChangelistDialog2/0.23.1440.840@0.23.1440.840" timestamp="1603983339444" />
@@ -421,17 +420,17 @@
       <screen x="0" y="23" width="1440" height="840" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="ShowDiffWithBranchDialog/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1604040123610" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605147145219">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605168674026">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605147145219" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605168674026" />
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1604672351629" />
     <state x="320" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603441017679" />
     <state x="320" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.840@0.23.1440.840" timestamp="1603983514653" />
-    <state x="421" y="176" width="598" height="548" key="find.popup" timestamp="1604239275256">
+    <state x="421" y="176" width="598" height="548" key="find.popup" timestamp="1605171645562">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="421" y="176" width="598" height="548" key="find.popup/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1603779928793" />
+    <state x="421" y="176" width="598" height="548" key="find.popup/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605171645562" />
     <state x="421" y="176" width="598" height="548" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1604239275256" />
     <state x="421" y="187" width="598" height="548" key="find.popup/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603446842553" />
     <state x="385" y="196" width="687" height="676" key="search.everywhere.popup" timestamp="1604910351463">

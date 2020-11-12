@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>接口测试</title>
+    <script type="text/javascript" src="/static/js/apis.js"></script>
 </head>
 <body>
     <div style="text-align: center">
@@ -36,7 +37,7 @@
             {% for i in apis %}
                 <tr>
                     <td>{{ i.id }}</td> <td>{{ i.api_name }}</td> <td>{{ i.api_host }}</td> <td>{{ i.api_url }}</td> <td>{{ i.api_method }}</td> <td>
-                    <button onclick="" class="btn btn-success">调试</button>
+                    <button onclick="open_debug()" class="btn btn-success">调试</button>
                     <button onclick="open_comment('{{ i.id }}')" class="btn btn-info">备注</button>
                     <button class="btn btn-info">复制</button>
                     <button class="btn btn-info">异常值测试</button>
@@ -53,24 +54,26 @@
         <button onclick="cancel_comment()" class="btn btn-danger" style="width: 49.3%;height: 20%">取消</button>
     </div>
 
-    <div id="debug" style="border-radius: 5px;width: 80%;height: 80%;position: fixed;left: 10%;top: 10%;background-color: #3c4043;box-shadow: 4px 4px 8px grey;color: white;padding-left: 10px">
+    <div id="debug" style="border-radius: 5px;width: 80%;position: fixed;left: 10%;top: 10%;background-color: #3c4043;box-shadow: 4px 4px 8px grey;color: white;padding-left: 10px">
         <div class="btn-group" style="float: right">
-            <button class="btn btn-success">保存</button>
-            <button class="btn btn-danger">取消</button>
+            <button onclick="save_debug()" class="btn btn-success">保存</button>
+            <button onclick="cancel_debug()" class="btn btn-danger">取消</button>
         </div>
         <h3>接口：<small></small><small></small></h3>
         <ul class="nav navbar-nav" style="width: 99%">
             <li>
-                <select class="form-control" style="height: 40px">
+                <label for="select_request">
+                <select id="debug_method" class="form-control" style="height: 40px">
                     <option value="none">请求方式</option>
                     <option value="post">POST</option>
                     <option value="get">GET</option>
                     <option value="put">PUT</option>
                     <option value="delete">DELETE</option>
                 </select>
+                </label>
             </li>
             <li style="width: -webkit-calc(100% - 220px)">
-                <input style="color:black;padding-left: 10px;width: 100%;height: 40px" type="text" placeholder="url, 如：/abc/ad/" value="">
+                <input id="debug_url" style="color:black;padding-left: 10px;width: 100%;height: 40px" type="text" placeholder="url, 如：/abc/ad/" value="">
             </li>
             <li>
                 <button type="button" style="height: 40px;width: 100px;" class="btn btn-default">
@@ -81,7 +84,7 @@
         <br><br><br>
         <ul class="nav navbar-nav" style="width: 98%">
             <li style="width: -webkit-calc(100% - 63px)">
-                <input style="color:black;padding-left: 10px;width: 100%;height: 40px" type="text" placeholder="host: 如http(s)://www.abc.com" value="">
+                <input id="debug_host" style="color:black;padding-left: 10px;width: 100%;height: 40px" type="text" placeholder="host: 如http(s)://www.abc.com" value="">
             </li>
             <li>
                 <button type="button" style="height: 40px;width: 60px" class="btn btn-default"><span style="font-size: large">clear</span></button>
@@ -90,7 +93,7 @@
         <br><br><br>
         <ul class="nav navbar-nav" style="width: 98%">
             <li style="width: -webkit-calc(100% - 63px)">
-                <input style="color:black;padding-left: 10px;width: 100%;height: 40px" type="text" placeholder='header请求头，如：{"Content":"application/json"}' value="">
+                <input id="debug_header" style="color:black;padding-left: 10px;width: 100%;height: 40px" type="text" placeholder='header请求头，如：{"Content":"application/json"}' value="">
             </li>
             <li>
                 <button type="button" style="height: 40px;width: 60px" class="btn btn-default"><span style="font-size: large">clear</span></button>
@@ -98,23 +101,23 @@
         </ul>
         <br><br><br>
         <ul id="myTab" class="nav nav-tabs">
-            <li class="active"><a href="#None" data-toggle="tab">None</a></li>
+            <li class="active"><a href="#none" data-toggle="tab">none</a></li>
             <li><a href="#form-data" data-toggle="tab">form-data</a></li>
             <li><a href="#x-www-form-urlencoded" data-toggle="tab">x-www-form-urlencoded</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">raw<b class="caret"></b></a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
                     <li><a href="#Text" tabindex="-1" data-toggle="tab">Text</a></li>
-                    <li><a href="#Javascript" tabindex="-1" data-toggle="tab">Javascript</a></li>
+                    <li><a href="#JavaScript" tabindex="-1" data-toggle="tab">JavaScript</a></li>
                     <li><a href="#Json" tabindex="-1" data-toggle="tab">Json</a></li>
                     <li><a href="#Html" tabindex="-1" data-toggle="tab">Html</a></li>
                     <li><a href="#Xml" tabindex="-1" data-toggle="tab">Xml</a></li>
                 </ul>
             </li>
-            <li><a href="#home" data-toggle="tab">返回体</a></li>
+            <li><a href="#Response" data-toggle="tab">返回体</a></li>
         </ul>
         <div id="myTabContent" class="tab-content">
-            <div class="tab-pane fade in active" id="None" style="text-align: center;color: grey">
+            <div class="tab-pane fade in active" id="none" style="text-align: center;color: grey">
                 <h3>这个请求将不会携带任何请求体</h3>
                 <h5>This request will not carry any request body.</h5>
             </div>  {# in active 表示默认显示 #}
@@ -149,13 +152,57 @@
                     });
                 </script>
             </div>
-            <div class="tab-pane fade" id="x-www-form-urlencoded">进入了x-www-from-urlencoded</div>
-            <div class="tab-pane fade" id="Text">进入了Text</div>
-            <div class="tab-pane fade" id="Javascript">进入了Javascript</div>
-            <div class="tab-pane fade" id="Json">进入了Json</div>
-            <div class="tab-pane fade" id="Html">进入了Html</div>
-            <div class="tab-pane fade" id="Xml">进入了Xml</div>
+            <div class="tab-pane fade" id="x-www-form-urlencoded">
+                <div class="table-responsive" style="width: 98%;color: black">
+                    <table class="table table-bordered table-striped" id="mytable_1" style="background-color:white">
+                        <thead style="color: #337ab7;font-size: x-small">
+                            <tr>
+                                <td style="width: 30%">Key</td>
+                                <td style="width: 50%">Value</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Username</td>
+                                <td>longmin</td>
+                            </tr>
+                            <tr>
+                                <td>Password</td>
+                                <td>123456</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button class="btn btn-default" id="add_1"><i class="fa fa-plus"></i>添加新参数</button>
+                <script>window.jQuery || document.write('<script src="/static/201801271505/js/jquery-1.11.0.min.js"><\/script>')</script>
+                <script type="text/javascript" src="/static/201801271505/js/bootstable.js"></script>
+                <script type="text/javascript">
+                    $('#mytable_1').SetEditable({
+                        $addButton: $('#add_1'),
+                        // $deleteButton: $('#add'),
+                    });
+                </script>
+            </div>
+            <div class="tab-pane fade" id="Text">
+                <label for=""></label><textarea class="" id="" style="color: black;width: 99%;height: 300px"></textarea>
+            </div>
+            <div class="tab-pane fade" id="JavaScript">
+                <label for=""></label><textarea class="" id="" style="color: black;width: 99%;height: 300px"></textarea>
+            </div>
+            <div class="tab-pane fade" id="Json">
+                <label for=""></label><textarea class="" id="" style="color: black;width: 99%;height: 300px"></textarea>
+            </div>
+            <div class="tab-pane fade" id="Html">
+                <label for=""></label><textarea class="" id="" style="color: black;width: 99%;height: 300px"></textarea>
+            </div>
+            <div class="tab-pane fade" id="Xml">
+                <label for=""></label><textarea class="" id="" style="color: black;width: 99%;height: 300px"></textarea>
+            </div>
+            <div class="tab-pane fade" id="Response">
+                <label for=""></label><textarea class="" id="" disabled="disabled" style="color: #d0e9c6;width: 99%;height: 300px"></textarea>
+            </div>
         </div>
+        <br>
     </div>
 
     <div style="position: fixed;bottom: 0;width: 100%;background-color: #f8f8f8;text-align: center;border: 1px solid #e7e7e7">
@@ -168,33 +215,6 @@
             <button type="button" class="btn btn-default">加密算法</button>
             <button type="button" class="btn btn-default">登录态接口</button>
         </div>
-    </div> 
-    
-    <script>
-        function open_comment(id) {   //打开评论内容输入栏
-            document.getElementById('comment_value').value = '';
-            $.get('/get_comment/', {
-                'api_id': id,
-            }, function (ret){
-                document.getElementById('comment').style.display = 'block';
-                document.getElementById('which_api').value = id;
-                document.getElementById('comment_value').value = ret;
-            })
-        }
-        function cancel_comment() {  //取消评论
-            document.getElementById('comment').style.display = 'none';
-        }
-        function save_comment() {  //保存评论
-            let id = document.getElementById('which_api').value;
-            let comment_value = document.getElementById('comment_value').value;
-            $.get('/save_comment/', {
-                'api_id': id,
-                'comment_value': comment_value
-            }, function (ret){
-                document.getElementById('comment').style.display = 'none'
-                console.log('此处返回的内容为---->' + ret)
-            })
-        }
-    </script>
+    </div>
 </body>
 </html>
