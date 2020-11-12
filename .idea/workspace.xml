@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c6c9a9-91bf-413d-a8f4-78b24113630c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apitest/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apitest/static/201801271505/css/htmleaf-demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apitest/static/201801271505/css/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apitest/static/201801271505/fonts/icomoon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apitest/static/201801271505/fonts/icomoon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apitest/static/201801271505/fonts/icomoon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apitest/static/201801271505/fonts/icomoon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apitest/static/201801271505/js/bootstable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apitest/static/201801271505/js/jquery-1.11.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apitest/static/201801271505/related/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apitest/static/201801271505/related/2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apitest/templates/apis.html" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/templates/apis.html" afterDir="false" />
     </list>
@@ -80,7 +89,7 @@
       <recent name="$PROJECT_DIR$/apitest/static/js" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.utils">
+  <component name="RunManager" selected="Django Server.testplatform">
     <configuration name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="testplatform" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -176,7 +185,8 @@
       <workItem from="1604046643498" duration="6936000" />
       <workItem from="1604293836533" duration="6336000" />
       <workItem from="1604584410002" duration="7760000" />
-      <workItem from="1604994551929" duration="6549000" />
+      <workItem from="1604994551929" duration="8884000" />
+      <workItem from="1605161011908" duration="2703000" />
     </task>
     <task id="LOCAL-00001" summary="testplatform init 01">
       <created>1603020258946</created>
@@ -290,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605059364741</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="testplatform init 17">
+      <created>1605147140587</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1605147140587</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,38 +347,38 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="464" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1604417355822" />
-    <state x="314" y="44" key="CommitChangelistDialog2" timestamp="1605059364458">
+    <state x="314" y="44" key="CommitChangelistDialog2" timestamp="1605147140396">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="314" y="44" key="CommitChangelistDialog2/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605059364458" />
+    <state x="314" y="44" key="CommitChangelistDialog2/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605147140396" />
     <state x="314" y="44" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1604672345223" />
     <state x="314" y="51" key="CommitChangelistDialog2/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603441013909" />
     <state x="314" y="51" key="CommitChangelistDialog2/0.23.1440.840@0.23.1440.840" timestamp="1603983339444" />
-    <state width="1398" height="210" key="GridCell.Tab.0.bottom" timestamp="1605146838670">
+    <state width="1398" height="210" key="GridCell.Tab.0.bottom" timestamp="1605163461105">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="210" key="GridCell.Tab.0.bottom/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605146838670" />
+    <state width="1398" height="210" key="GridCell.Tab.0.bottom/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605163461105" />
     <state width="699" height="210" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1604672368232" />
     <state width="1398" height="155" key="GridCell.Tab.0.bottom/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603447225135" />
     <state width="699" height="154" key="GridCell.Tab.0.bottom/0.23.1440.840@0.23.1440.840" timestamp="1603983327454" />
-    <state width="1398" height="210" key="GridCell.Tab.0.center" timestamp="1605146838669">
+    <state width="1398" height="210" key="GridCell.Tab.0.center" timestamp="1605163461102">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="210" key="GridCell.Tab.0.center/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605146838669" />
+    <state width="1398" height="210" key="GridCell.Tab.0.center/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605163461102" />
     <state width="699" height="210" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1604672368230" />
     <state width="1398" height="155" key="GridCell.Tab.0.center/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603447225135" />
     <state width="699" height="154" key="GridCell.Tab.0.center/0.23.1440.840@0.23.1440.840" timestamp="1603983327453" />
-    <state width="1398" height="210" key="GridCell.Tab.0.left" timestamp="1605146838668">
+    <state width="1398" height="210" key="GridCell.Tab.0.left" timestamp="1605163461101">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="210" key="GridCell.Tab.0.left/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605146838668" />
+    <state width="1398" height="210" key="GridCell.Tab.0.left/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605163461101" />
     <state width="699" height="210" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1604672368230" />
     <state width="1398" height="155" key="GridCell.Tab.0.left/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603447225134" />
     <state width="699" height="154" key="GridCell.Tab.0.left/0.23.1440.840@0.23.1440.840" timestamp="1603983327453" />
-    <state width="1398" height="210" key="GridCell.Tab.0.right" timestamp="1605146838670">
+    <state width="1398" height="210" key="GridCell.Tab.0.right" timestamp="1605163461103">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="210" key="GridCell.Tab.0.right/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605146838670" />
+    <state width="1398" height="210" key="GridCell.Tab.0.right/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605163461103" />
     <state width="699" height="210" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1604672368231" />
     <state width="1398" height="155" key="GridCell.Tab.0.right/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603447225135" />
     <state width="699" height="154" key="GridCell.Tab.0.right/0.23.1440.840@0.23.1440.840" timestamp="1603983327454" />
@@ -394,20 +411,20 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="456" y="177" key="RollbackChangesDialog/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1604028185901" />
-    <state x="107" y="140" key="SettingsEditor" timestamp="1605146726075">
+    <state x="280" y="119" key="SettingsEditor" timestamp="1605147991825">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="107" y="140" key="SettingsEditor/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605146726075" />
+    <state x="280" y="119" key="SettingsEditor/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605147991825" />
     <state x="186" y="162" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1603980445002" />
     <state x="211" y="116" key="SettingsEditor/0.23.1440.840@0.23.1440.840" timestamp="1603981288814" />
     <state x="100" y="100" width="1240" height="700" key="ShowDiffWithBranchDialog" timestamp="1604040123610">
       <screen x="0" y="23" width="1440" height="840" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="ShowDiffWithBranchDialog/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1604040123610" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605059369668">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605147145219">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605059369668" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605147145219" />
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1604672351629" />
     <state x="320" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603441017679" />
     <state x="320" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.840@0.23.1440.840" timestamp="1603983514653" />
@@ -446,7 +463,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/testplatform$taobao_air.coverage" NAME="taobao_air Coverage Results" MODIFIED="1603262561867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../.." />
     <SUITE FILE_PATH="coverage/testplatform$taobao_air_v1_0.coverage" NAME="taobao_air_v1.0 Coverage Results" MODIFIED="1603446071756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../.." />
-    <SUITE FILE_PATH="coverage/testplatform$utils.coverage" NAME="utils Coverage Results" MODIFIED="1605146838655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
+    <SUITE FILE_PATH="coverage/testplatform$utils.coverage" NAME="utils Coverage Results" MODIFIED="1605162219461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
     <SUITE FILE_PATH="coverage/testplatform$test.coverage" NAME="test Coverage Results" MODIFIED="1604417986560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest/templates" />
   </component>
 </project>
