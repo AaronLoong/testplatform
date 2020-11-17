@@ -37,7 +37,7 @@
             {% for i in apis %}
                 <tr>
                     <td>{{ i.id }}</td> <td>{{ i.api_name }}</td> <td>{{ i.api_host }}</td> <td>{{ i.api_url }}</td> <td>{{ i.api_method }}</td> <td>
-                    <button onclick="open_debug()" class="btn btn-success">调试</button>
+                    <button onclick="open_debug('{{ i.id }}', '{{ i.api_name }}')" class="btn btn-success">调试</button>
                     <button onclick="open_comment('{{ i.id }}')" class="btn btn-info">备注</button>
                     <button class="btn btn-info">复制</button>
                     <button class="btn btn-info">异常值测试</button>
@@ -54,12 +54,12 @@
         <button onclick="cancel_comment()" class="btn btn-danger" style="width: 49.3%;height: 20%">取消</button>
     </div>
 
-    <div id="debug" style="border-radius: 5px;width: 80%;position: fixed;left: 10%;top: 10%;background-color: #3c4043;box-shadow: 4px 4px 8px grey;color: white;padding-left: 10px">
+    <div id="debug" style="border-radius: 5px;width: 80%;position: fixed;left: 10%;top: 10%;background-color: #3c4043;box-shadow: 4px 4px 8px grey;color: white;padding-left: 10px;display: none">
         <div class="btn-group" style="float: right">
             <button onclick="save_debug()" class="btn btn-success">保存</button>
             <button onclick="cancel_debug()" class="btn btn-danger">取消</button>
         </div>
-        <h3>接口：<small></small><small></small></h3>
+        <h3>接口：<small id="debug_api_id" style="color: greenyellow"></small><small style="color: greenyellow">-</small><small id="debug_api_name" style="color: greenyellow"></small></h3>
         <ul class="nav navbar-nav" style="width: 99%">
             <li>
                 <label for="select_request">
@@ -107,11 +107,11 @@
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">raw<b class="caret"></b></a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
-                    <li><a href="#Text" tabindex="-1" data-toggle="tab">Text</a></li>
-                    <li><a href="#JavaScript" tabindex="-1" data-toggle="tab">JavaScript</a></li>
-                    <li><a href="#Json" tabindex="-1" data-toggle="tab">Json</a></li>
-                    <li><a href="#Html" tabindex="-1" data-toggle="tab">Html</a></li>
-                    <li><a href="#Xml" tabindex="-1" data-toggle="tab">Xml</a></li>
+                    <li><a id="raw_Text" href="#Text" tabindex="-1" data-toggle="tab">Text</a></li>
+                    <li><a id="raw_JavaScript" href="#JavaScript" tabindex="-1" data-toggle="tab">JavaScript</a></li>
+                    <li><a id="raw_Json" href="#Json" tabindex="-1" data-toggle="tab">Json</a></li>
+                    <li><a id="raw_Html" href="#Html" tabindex="-1" data-toggle="tab">Html</a></li>
+                    <li><a id="raw_Xml" href="#Xml" tabindex="-1" data-toggle="tab">Xml</a></li>
                 </ul>
             </li>
             <li><a href="#Response" data-toggle="tab">返回体</a></li>

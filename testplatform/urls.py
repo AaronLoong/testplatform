@@ -44,6 +44,7 @@ urlpatterns = [
     re_path(r'^save_project_set/(?P<id>.*)/$', save_project_set),
     re_path(r'^project_api_add/(?P<Pid>.*)/$', project_api_add),
     re_path(r'^project_api_del/(?P<id>.*)/$', project_api_del),
-    path('save_comment/', save_comment),
-    path('get_comment/', get_comment),
+    path('save_comment/', save_comment),   # 保存备注comment内容
+    path('get_comment/', get_comment),  # 获取备注comment内容
+    path('save_api/', save_api),  # 保存api接口调试内容
 ]
