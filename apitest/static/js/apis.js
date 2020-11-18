@@ -47,19 +47,48 @@ function save_comment() {  //保存评论
 }
 
 
-// 打开调试功能
 function open_debug(id, api_name) {
+	// 打开调试功能
+	clear_debug_content();
 	document.getElementById('debug').style.display = 'block';
 	document.getElementById('debug_api_id').innerText = id;
 	document.getElementById('debug_api_name').innerText = api_name;
 }
 
 
-// 调试的取消功能
 function cancel_debug(){
+	// 调试的取消功能
 	document.getElementById('debug').style.display = 'none';
 }
 
+function clear_debug_content(){
+	// 清除调试请求内容
+	document.getElementById('debug_api_id').innerText = '';
+	document.getElementById('debug_api_name').innerText = '';
+	document.getElementById('debug_method').value = 'none';
+	document.getElementById('debug_url').value = '';
+	document.getElementById('debug_host').value = '';
+	document.getElementById('debug_header').value = '{}';
+	// 初始化请求体编码格式部分
+	document.getElementById('click_none').click();
+	document.getElementById('mytbody').innerHTML = '<tr><td></td><td></td></tr>';
+	document.getElementById('mytbody2').innerHTML = '<tr><td></td><td></td></tr>'
+	document.getElementById('raw_Text').value = '';
+	document.getElementById('raw_Json').value = '';
+	document.getElementById('raw_Html').value = '';
+	document.getElementById('raw_JavaScript').value = '';
+	document.getElementById('raw_Xml').value = '';
+	// 清空返回体相关内容
+	document.getElementById('debug_response_body').value = '';
+	$('#mytable').SetEditable({
+		$addButton: $('#add'),
+		// $deleteButton: $('#add'),
+	});
+	$('#mytable_1').SetEditable({
+		$addButton: $('#add_1'),
+		// $deleteButton: $('#add'),
+	});
+}
 
 function save_debug() {
 	// 获取所有接口设置数据

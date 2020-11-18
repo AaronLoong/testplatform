@@ -101,7 +101,7 @@
         </ul>
         <br><br><br>
         <ul id="myTab" class="nav nav-tabs">
-            <li class="active"><a href="#none" data-toggle="tab">none</a></li>
+            <li class="active"><a id="click_none" href="#none" data-toggle="tab">none</a></li>
             <li><a href="#form-data" data-toggle="tab">form-data</a></li>
             <li><a href="#x-www-form-urlencoded" data-toggle="tab">x-www-form-urlencoded</a></li>
             <li class="dropdown">
@@ -114,7 +114,7 @@
                     <li><a id="raw_Xml" href="#Xml" tabindex="-1" data-toggle="tab">Xml</a></li>
                 </ul>
             </li>
-            <li><a href="#Response" data-toggle="tab">返回体</a></li>
+            <li><a id="debug_response_body" href="#Response" data-toggle="tab">返回体</a></li>
         </ul>
         <div id="myTabContent" class="tab-content">
             <div class="tab-pane fade in active" id="none" style="text-align: center;color: grey">
@@ -130,14 +130,10 @@
                                 <td style="width: 50%">Value</td>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="mytbody">
                             <tr>
-                                <td>Username</td>
-                                <td>longmin</td>
-                            </tr>
-                            <tr>
-                                <td>Password</td>
-                                <td>123456</td>
+                                <td></td>
+                                <td></td>
                             </tr>
                         </tbody>
                     </table>
@@ -161,14 +157,10 @@
                                 <td style="width: 50%">Value</td>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="mytbody2">
                             <tr>
-                                <td>Username</td>
-                                <td>longmin</td>
-                            </tr>
-                            <tr>
-                                <td>Password</td>
-                                <td>123456</td>
+                                <td></td>
+                                <td></td>
                             </tr>
                         </tbody>
                     </table>
