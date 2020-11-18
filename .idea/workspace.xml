@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c6c9a9-91bf-413d-a8f4-78b24113630c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/apitest/static/image/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apitest/static/js/apis.js" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/static/js/apis.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apitest/templates/apis.html" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/templates/apis.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apitest/views_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/views_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apitest/templates/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/templates/welcome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apitest/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +64,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/apitest/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/apitest/static/image" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -74,8 +75,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/apitest/static" />
       <recent name="$PROJECT_DIR$/apitest/static/image" />
+      <recent name="$PROJECT_DIR$/apitest/static" />
       <recent name="$PROJECT_DIR$/apitest/static/css" />
       <recent name="$PROJECT_DIR$/apitest/static/fonts" />
       <recent name="$PROJECT_DIR$/apitest/static/js" />
@@ -180,7 +181,7 @@
       <workItem from="1604994551929" duration="8884000" />
       <workItem from="1605161011908" duration="12447000" />
       <workItem from="1605488511957" duration="7131000" />
-      <workItem from="1605668968327" duration="157000" />
+      <workItem from="1605668968327" duration="1528000" />
     </task>
     <task id="LOCAL-00001" summary="testplatform init 01">
       <created>1603020258946</created>
@@ -322,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605622452274</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="testplatform init 21">
+      <created>1605669281088</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1605669281088</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +357,8 @@
     <MESSAGE value="testplatform init 18" />
     <MESSAGE value="testplatform init 19" />
     <MESSAGE value="testplatform init 20" />
-    <option name="LAST_COMMIT_MESSAGE" value="testplatform init 20" />
+    <MESSAGE value="testplatform init 21" />
+    <option name="LAST_COMMIT_MESSAGE" value="testplatform init 21" />
   </component>
   <component name="WindowStateProjectService">
     <state x="354" y="135" key="#Inspections" timestamp="1603351266777">
@@ -365,10 +374,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="464" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1604417355822" />
-    <state x="314" y="44" key="CommitChangelistDialog2" timestamp="1605622452014">
+    <state x="314" y="44" key="CommitChangelistDialog2" timestamp="1605669280784">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="314" y="44" key="CommitChangelistDialog2/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605168669534" />
+    <state x="314" y="44" key="CommitChangelistDialog2/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605669280784" />
     <state x="314" y="44" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1605622452014" />
     <state x="314" y="51" key="CommitChangelistDialog2/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603441013909" />
     <state x="314" y="51" key="CommitChangelistDialog2/0.23.1440.840@0.23.1440.840" timestamp="1603983339444" />
@@ -440,17 +449,17 @@
       <screen x="0" y="23" width="1440" height="840" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="ShowDiffWithBranchDialog/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1604040123610" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605622457410">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605669287598">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605168674026" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605669287598" />
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1605622457410" />
     <state x="320" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603441017679" />
     <state x="320" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.840@0.23.1440.840" timestamp="1603983514653" />
-    <state x="421" y="176" width="598" height="548" key="find.popup" timestamp="1605537002064">
+    <state x="421" y="176" width="598" height="548" key="find.popup" timestamp="1605679303711">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="421" y="176" width="598" height="548" key="find.popup/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605171645562" />
+    <state x="421" y="176" width="598" height="548" key="find.popup/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605679303711" />
     <state x="421" y="176" width="598" height="548" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1605537002064" />
     <state x="421" y="187" width="598" height="548" key="find.popup/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603446842553" />
     <state x="385" y="196" width="687" height="676" key="search.everywhere.popup" timestamp="1605246729011">

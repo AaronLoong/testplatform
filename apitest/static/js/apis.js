@@ -72,7 +72,7 @@ function clear_debug_content(){
 	// 初始化请求体编码格式部分
 	document.getElementById('click_none').click();
 	document.getElementById('mytbody').innerHTML = '<tr><td></td><td></td></tr>';
-	document.getElementById('mytbody2').innerHTML = '<tr><td></td><td></td></tr>'
+	document.getElementById('mytbody2').innerHTML = '<tr><td></td><td></td></tr>';
 	document.getElementById('raw_Text').value = '';
 	document.getElementById('raw_Json').value = '';
 	document.getElementById('raw_Html').value = '';
@@ -102,9 +102,7 @@ function save_debug() {
 		'当前请求服务器为：' + debug_host,
 		'当前请求头为：' + debug_header
 	)
-	// Toast('提示：当前你调试的接口信息为->' + debug_method+debug_url+debug_host+debug_header, 10000)  // toast弹窗查看内容
 	let debug_body_method = $('ul#myTab li[class=active]')[0].innerText;
-	// console.log(debug_body_method)
 	let debug_api_body = ''
 	if (debug_body_method === 'none'){
 		let debug_api_body = ''
@@ -149,8 +147,6 @@ function save_debug() {
 	}
 	if (debug_body_method === 'Xml'){
 		let debug_api_body = document.getElementById('raw_Xml').value;
-	}else {
-		Toast('不明消息体编码方式，请核实后再试！')
 	}
 	let api_id = document.getElementById('debug_api_id').innerText;  // 获取接口id
 	$.get('/save_api/',{
@@ -165,7 +161,5 @@ function save_debug() {
 			console.log(ret)
 			document.getElementById('debug').style.display = 'none';
 		}
-
 	)
-
 }

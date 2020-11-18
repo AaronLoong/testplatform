@@ -110,10 +110,12 @@ def project_list(request):
 def delete_project(request):
     project_id = request.GET['id']
     Project.objects.filter(id=project_id).delete()
+    Apis.objects.filter(project_id=project_id).delete()
     return HttpResponse('')
 
 
 def add_project(request):
+    # 删除项目
     project_name = request.GET['project_name']
     Project.objects.create(project_name=project_name, project_remark='', project_build_user=request.user.username, project_build_other_user='')
     return HttpResponse('')
