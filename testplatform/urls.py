@@ -47,4 +47,5 @@ urlpatterns = [
     path('save_comment/', save_comment),   # 保存备注comment内容
     path('get_comment/', get_comment),  # 获取备注comment内容
     path('save_api/', save_api),  # 保存api接口调试内容
+    path('get_api_data/', get_api_data),  # 获取接口数据
 ]

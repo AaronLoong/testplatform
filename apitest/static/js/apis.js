@@ -52,7 +52,12 @@ function open_debug(id, api_name) {
 	clear_debug_content();
 	document.getElementById('debug').style.display = 'block';
 	document.getElementById('debug_api_id').innerText = id;
-	document.getElementById('debug_api_name').innerText = api_name;
+	document.getElementById('debug_api_name').value = api_name;
+	$.get('/get_api_data/', {
+		'debug_api_id': id,
+	}, function (ret){
+		console.log(ret)
+	})
 }
 
 
@@ -92,6 +97,7 @@ function clear_debug_content(){
 
 function save_debug() {
 	// 获取所有接口设置数据
+	let debug_api_name = document.getElementById('debug_api_name').value;
 	let debug_method = document.getElementById('debug_method').value;
 	let debug_url = document.getElementById('debug_url').value;
 	let debug_host = document.getElementById('debug_host').value;
@@ -151,6 +157,7 @@ function save_debug() {
 	let api_id = document.getElementById('debug_api_id').innerText;  // 获取接口id
 	$.get('/save_api/',{
 		'api_id': api_id,
+		'debug_api_name': debug_api_name,
 		'debug_body_method': debug_body_method,
 		'debug_url': debug_url,
 		'debug_host': debug_host,
@@ -159,7 +166,9 @@ function save_debug() {
 		'debug_api_body': debug_api_body
 		}, function (ret) {
 			console.log(ret)
+			document.location.reload();
 			document.getElementById('debug').style.display = 'none';
+
 		}
 	)
 }

@@ -5,10 +5,11 @@
 @Author: Longmin
 @Time: 2020/11/9 10:58 上午
 """
-from django.shortcuts import render
+import json
+
+from django.db.utils import OperationalError
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
-from django.db.utils import OperationalError
 
 from apitest.models import *
 
@@ -45,6 +46,7 @@ def get_comment(request):
 def save_api(request):
 	""" 保存接口调试内容"""
 	api_id = request.GET['api_id']
+	api_name = request.GET['debug_api_name']
 	debug_api_method = request.GET['debug_body_method']
 	debug_url = request.GET['debug_url']
 	debug_host = request.GET['debug_host']
@@ -55,6 +57,7 @@ def save_api(request):
 	# 保存数据
 	try:
 		Apis.objects.filter(id=api_id).update(
+			api_name=api_name,
 			api_method=debug_method,
 			api_body_method=debug_api_method,  # 请求体编码方式
 			api_host=debug_host,
@@ -66,3 +69,10 @@ def save_api(request):
 		raise OperationalError('保存调试信息失败')
 	finally:
 		return HttpResponse('success')
+
+
+def get_api_data(request):
+	""" 获取接口数据 """
+	api_id = request.GET['api_id']
+	api = Apis.objects.filter(id=api_id).values()[0]
+	return HttpResponse(json.dumps(api), content_type='application/json')

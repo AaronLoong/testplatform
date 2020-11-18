@@ -18,6 +18,18 @@
     font-size: large;
 }
 
+.display_menu {
+    position: absolute;
+    left: 188px;
+    top: 50%;
+    z-index: 999;
+    height: 35px;
+    background-color: #353C48;
+    color: white;
+    border: 0;
+    font-size: x-large;
+}
+
 /* home.html */
 .title h1 h3 {
     color: black;
