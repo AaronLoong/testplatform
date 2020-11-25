@@ -73,6 +73,7 @@ def save_api(request):
 
 def get_api_data(request):
 	""" 获取接口数据 """
-	api_id = request.GET['api_id']
+	api_id = request.GET['debug_api_id']
 	api = Apis.objects.filter(id=api_id).values()[0]
+	print(api)
 	return HttpResponse(json.dumps(api), content_type='application/json')

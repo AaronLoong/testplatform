@@ -52,11 +52,41 @@ function open_debug(id, api_name) {
 	clear_debug_content();
 	document.getElementById('debug').style.display = 'block';
 	document.getElementById('debug_api_id').innerText = id;
-	document.getElementById('debug_api_name').value = api_name;
 	$.get('/get_api_data/', {
 		'debug_api_id': id,
 	}, function (ret){
 		console.log(ret)
+		// 接收返回值之后的操作
+		document.getElementById('debug_api_name').value = ret.api_name;
+		document.getElementById('debug_method').value = ret.api_method;
+		document.getElementById('debug_url').value = ret.api_url;
+		document.getElementById('debug_host').value = ret.api_host;
+		document.getElementById('debug_header').value = ret.api_header;
+		// 请求体编码格式
+		// TODO: 此处存在bug，点击「调试」无法定位到对应的请求体编码方式，待修改
+		let body_method = '#' + ret.api_body_method;
+		console.log(body_method)
+		$("li a[href=" + body_method + "]").click();
+		// 请求体显示
+		if (ret.api_body_method === 'Text'){
+			document.getElementById('raw_Text').value = ret.api_body;
+		}
+		if (ret.api_body_method === 'JavaScript'){
+			document.getElementById('raw_JavaScript').value = ret.api_body;
+		}
+		if (ret.api_body_method === 'Json'){
+			document.getElementById('raw_Json').value = ret.api_body;
+		}
+		if (ret.api_body_method === 'Html'){
+			document.getElementById('raw_Html').value = ret.api_body;
+		}
+		if (ret.api_body_method === 'Xml'){
+			document.getElementById('raw_Xml').value = ret.api_body;
+		}
+		if (ret.api_body_method === 'form-data'){
+
+		}
+
 	})
 }
 
@@ -168,7 +198,6 @@ function save_debug() {
 			console.log(ret)
 			document.location.reload();
 			document.getElementById('debug').style.display = 'none';
-
 		}
 	)
 }
