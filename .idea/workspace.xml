@@ -7,8 +7,6 @@
     <list default="true" id="a3c6c9a9-91bf-413d-a8f4-78b24113630c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apitest/static/js/apis.js" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/static/js/apis.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apitest/templates/apis.html" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/templates/apis.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apitest/views_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/views_api.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +180,8 @@
       <workItem from="1605488511957" duration="7131000" />
       <workItem from="1605668968327" duration="9983000" />
       <workItem from="1606054962971" duration="747000" />
-      <workItem from="1606181851436" duration="1050000" />
+      <workItem from="1606181851436" duration="2378000" />
+      <workItem from="1606709210900" duration="298000" />
     </task>
     <task id="LOCAL-00001" summary="testplatform init 01">
       <created>1603020258946</created>
@@ -345,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605691315684</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="新增部分获取接口内容-02">
+      <created>1606290813174</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1606290813174</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,7 +381,8 @@
     <MESSAGE value="testplatform init 21" />
     <MESSAGE value="添加站点icon&amp;修改部分内容" />
     <MESSAGE value="新增部分获取接口内容-01" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增部分获取接口内容-01" />
+    <MESSAGE value="新增部分获取接口内容-02" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增部分获取接口内容-02" />
   </component>
   <component name="WindowStateProjectService">
     <state x="354" y="135" key="#Inspections" timestamp="1603351266777">
@@ -391,10 +398,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="464" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1604417355822" />
-    <state x="314" y="44" key="CommitChangelistDialog2" timestamp="1605691315477">
+    <state x="314" y="44" key="CommitChangelistDialog2" timestamp="1606290812841">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="314" y="44" key="CommitChangelistDialog2/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605691315477" />
+    <state x="314" y="44" key="CommitChangelistDialog2/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1606290812841" />
     <state x="314" y="44" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1605622452014" />
     <state x="314" y="51" key="CommitChangelistDialog2/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603441013909" />
     <state x="314" y="51" key="CommitChangelistDialog2/0.23.1440.840@0.23.1440.840" timestamp="1603983339444" />
@@ -466,10 +473,10 @@
       <screen x="0" y="23" width="1440" height="840" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="ShowDiffWithBranchDialog/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1604040123610" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605691322886">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1606290816862">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605691322886" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1606290816862" />
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1605622457410" />
     <state x="320" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603441017679" />
     <state x="320" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.840@0.23.1440.840" timestamp="1603983514653" />

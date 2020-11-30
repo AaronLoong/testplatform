@@ -84,7 +84,20 @@ function open_debug(id, api_name) {
 			document.getElementById('raw_Xml').value = ret.api_body;
 		}
 		if (ret.api_body_method === 'form-data'){
-
+			const tbody = document.getElementById('mytbody'); // 定位表格中的tbody部分
+    		body = eval(ret.api_body); //把这个像列表的字符串请求体变成真正的列表
+    		for(let i = 0; i < body.length; i++){ // 遍历这个请求体列表
+				key = body[i][0]; //拿出每一个键值对的key
+				value = body[i][1];//拿出每一个键值对的value
+				const childs_tr = tbody.children;//获取到这个表格下面所有的tr组成的大列表
+				// 每个tr下的children得到的是 td列表，只有俩个。
+				childs_tr[i].children[0].innerText = key; //第一个td放key
+				childs_tr[i].children[1].innerText = value;//第二个td放value
+				//判断是否是最后一次遍历，来决定是否点击新增参数按钮
+				if(i < body.length-1){
+					document.getElementById('add').click()
+        		}
+    		}
 		}
 
 	})
