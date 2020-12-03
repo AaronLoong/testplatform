@@ -77,3 +77,19 @@ def get_api_data(request):
 	api = Apis.objects.filter(id=api_id).values()[0]
 	print(api)
 	return HttpResponse(json.dumps(api), content_type='application/json')
+
+
+def send_api(request):
+	""" 调试层发送的请求 """
+	api_id = request.GET['api_id']
+	api_name = request.GET['debug_api_name']
+	debug_api_method = request.GET['debug_body_method']
+	debug_url = request.GET['debug_url']
+	debug_host = request.GET['debug_host']
+	debug_header = request.GET['debug_header']
+	debug_method = request.GET['debug_method']
+	debug_api_body = request.GET['debug_api_body']
+	# 发送请求获取返回值
+
+	# 将返回值传递给前端页面
+	return HttpResponse('{"code":200}')
