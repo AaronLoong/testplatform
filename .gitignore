@@ -142,3 +142,5 @@ cython_debug/
 将删除 manage.py
 将删除 templates/
 将删除 testplatform/
+!/.vscode/
+!/.pytest_cache/
