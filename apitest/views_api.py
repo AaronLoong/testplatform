@@ -84,6 +84,7 @@ def send_api(request):
 	api_id = request.GET['api_id']
 	api_name = request.GET['debug_api_name']
 	debug_api_method = request.GET['debug_body_method']
+	print(debug_api_method)
 	debug_url = request.GET['debug_url']
 	debug_host = request.GET['debug_host']
 	debug_header = request.GET['debug_header']

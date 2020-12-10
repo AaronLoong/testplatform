@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c6c9a9-91bf-413d-a8f4-78b24113630c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apitest/migrations/0008_auto_20201203_1713.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apitest/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apitest/templates/help.html" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/templates/help.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apitest/templates/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/templates/welcome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apitest/views_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/views_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testplatform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/testplatform/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +68,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -191,6 +187,11 @@
       <workItem from="1606982990916" duration="1001000" />
       <workItem from="1606986019478" duration="845000" />
       <workItem from="1607076196652" duration="1137000" />
+      <workItem from="1607096072314" duration="815000" />
+      <workItem from="1607261538777" duration="99000" />
+      <workItem from="1607261678484" duration="157000" />
+      <workItem from="1607262039362" duration="1134000" />
+      <workItem from="1607521088996" duration="79000" />
     </task>
     <task id="LOCAL-00001" summary="testplatform init 01">
       <created>1603020258946</created>
@@ -409,120 +410,6 @@
     <MESSAGE value="新增部分获取接口内容-04" />
     <option name="LAST_COMMIT_MESSAGE" value="新增部分获取接口内容-04" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="354" y="135" key="#Inspections" timestamp="1603351266777">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="354" y="135" key="#Inspections/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1603351266777" />
-    <state x="319" y="114" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604667431026">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1603359043021" />
-    <state x="319" y="114" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1604667431026" />
-    <state x="464" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604417355822">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="464" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1604417355822" />
-    <state x="408" y="193" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1606985606320">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="408" y="193" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1606985606320" />
-    <state x="314" y="44" key="CommitChangelistDialog2" timestamp="1606979876566">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="314" y="44" key="CommitChangelistDialog2/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1606979876566" />
-    <state x="314" y="44" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1605622452014" />
-    <state x="314" y="51" key="CommitChangelistDialog2/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1606717995595" />
-    <state x="314" y="51" key="CommitChangelistDialog2/0.23.1440.840@0.23.1440.840" timestamp="1603983339444" />
-    <state width="1398" height="97" key="GridCell.Tab.0.bottom" timestamp="1606982092431">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="97" key="GridCell.Tab.0.bottom/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1606982092431" />
-    <state width="1398" height="210" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606055100292" />
-    <state width="1398" height="210" key="GridCell.Tab.0.bottom/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1606119361267" />
-    <state width="699" height="154" key="GridCell.Tab.0.bottom/0.23.1440.840@0.23.1440.840" timestamp="1603983327454" />
-    <state width="1398" height="97" key="GridCell.Tab.0.center" timestamp="1606982092428">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="97" key="GridCell.Tab.0.center/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1606982092428" />
-    <state width="1398" height="210" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1606055100291" />
-    <state width="1398" height="210" key="GridCell.Tab.0.center/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1606119361266" />
-    <state width="699" height="154" key="GridCell.Tab.0.center/0.23.1440.840@0.23.1440.840" timestamp="1603983327453" />
-    <state width="1398" height="97" key="GridCell.Tab.0.left" timestamp="1606982092427">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="97" key="GridCell.Tab.0.left/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1606982092427" />
-    <state width="1398" height="210" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1606055100290" />
-    <state width="1398" height="210" key="GridCell.Tab.0.left/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1606119361265" />
-    <state width="699" height="154" key="GridCell.Tab.0.left/0.23.1440.840@0.23.1440.840" timestamp="1603983327453" />
-    <state width="1398" height="97" key="GridCell.Tab.0.right" timestamp="1606982092430">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="97" key="GridCell.Tab.0.right/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1606982092430" />
-    <state width="1398" height="210" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1606055100292" />
-    <state width="1398" height="210" key="GridCell.Tab.0.right/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1606119361266" />
-    <state width="699" height="154" key="GridCell.Tab.0.right/0.23.1440.840@0.23.1440.840" timestamp="1603983327454" />
-    <state width="1398" height="335" key="GridCell.Tab.1.bottom" timestamp="1603333015686">
-      <screen x="0" y="23" width="1440" height="840" />
-    </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1603261643621" />
-    <state width="1398" height="335" key="GridCell.Tab.1.bottom/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603333015686" />
-    <state width="1398" height="335" key="GridCell.Tab.1.center" timestamp="1603333015686">
-      <screen x="0" y="23" width="1440" height="840" />
-    </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1603261643619" />
-    <state width="1398" height="335" key="GridCell.Tab.1.center/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603333015686" />
-    <state width="1398" height="335" key="GridCell.Tab.1.left" timestamp="1603333015685">
-      <screen x="0" y="23" width="1440" height="840" />
-    </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1603261643618" />
-    <state width="1398" height="335" key="GridCell.Tab.1.left/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603333015685" />
-    <state width="1398" height="335" key="GridCell.Tab.1.right" timestamp="1603333015686">
-      <screen x="0" y="23" width="1440" height="840" />
-    </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1603261643620" />
-    <state width="1398" height="335" key="GridCell.Tab.1.right/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603333015686" />
-    <state x="308" y="192" key="IDE.errors.dialog" timestamp="1604976087516">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="308" y="192" key="IDE.errors.dialog/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1604976087516" />
-    <state x="308" y="192" key="IDE.errors.dialog/0.0.1440.900@0.0.1440.900" timestamp="1604239896494" />
-    <state x="456" y="177" key="RollbackChangesDialog" timestamp="1604028185901">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="456" y="177" key="RollbackChangesDialog/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1604028185901" />
-    <state x="347" y="127" key="SettingsEditor" timestamp="1606982728848">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="347" y="127" key="SettingsEditor/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1606982728848" />
-    <state x="186" y="162" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1603980445002" />
-    <state x="195" y="57" key="SettingsEditor/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1605668937861" />
-    <state x="211" y="116" key="SettingsEditor/0.23.1440.840@0.23.1440.840" timestamp="1603981288814" />
-    <state x="100" y="100" width="1240" height="700" key="ShowDiffWithBranchDialog" timestamp="1604040123610">
-      <screen x="0" y="23" width="1440" height="840" />
-    </state>
-    <state x="100" y="100" width="1240" height="700" key="ShowDiffWithBranchDialog/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1604040123610" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1606979881443">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1606979881443" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1605622457410" />
-    <state x="320" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1606718002459" />
-    <state x="320" y="200" key="Vcs.Push.Dialog.v2/0.23.1440.840@0.23.1440.840" timestamp="1603983514653" />
-    <state x="421" y="176" width="598" height="548" key="find.popup" timestamp="1605679303711">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="421" y="176" width="598" height="548" key="find.popup/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605679303711" />
-    <state x="421" y="176" width="598" height="548" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1605537002064" />
-    <state x="421" y="187" width="598" height="548" key="find.popup/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603446842553" />
-    <state x="385" y="196" width="687" height="676" key="search.everywhere.popup" timestamp="1605246729011">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="385" y="196" width="687" height="676" key="search.everywhere.popup/0.0.1440.900/-227.-1080.1920.1080@0.0.1440.900" timestamp="1605246729011" />
-    <state x="385" y="196" width="687" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1604417610007" />
-    <state x="385" y="206" width="687" height="631" key="search.everywhere.popup/0.23.1440.840/-227.-1057.1920.1057@0.23.1440.840" timestamp="1603440084730" />
-    <state x="385" y="206" width="687" height="631" key="search.everywhere.popup/0.23.1440.840@0.23.1440.840" timestamp="1603981505956" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -543,8 +430,8 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/testplatform$taobao_air.coverage" NAME="taobao_air Coverage Results" MODIFIED="1603262561867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../.." />
-    <SUITE FILE_PATH="coverage/testplatform$taobao_air_v1_0.coverage" NAME="taobao_air_v1.0 Coverage Results" MODIFIED="1603446071756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../.." />
     <SUITE FILE_PATH="coverage/testplatform$utils.coverage" NAME="utils Coverage Results" MODIFIED="1605162219461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
+    <SUITE FILE_PATH="coverage/testplatform$taobao_air_v1_0.coverage" NAME="taobao_air_v1.0 Coverage Results" MODIFIED="1603446071756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../.." />
     <SUITE FILE_PATH="coverage/testplatform$test.coverage" NAME="test Coverage Results" MODIFIED="1604417986560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest/templates" />
   </component>
 </project>

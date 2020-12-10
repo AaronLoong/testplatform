@@ -41,7 +41,7 @@ urlpatterns = [
     re_path(r'^apis/(?P<id>.*)$', to_apis_library),
     re_path(r'^cases/(?P<id>.*)$', to_cases_library),
     re_path(r'^project_set/(?P<id>.*)$', to_project_set),
-    re_path(r'^save_project_set/(?P<id>.*)/$', save_project_set),
+    re_path('^save_project_set/(?P<id>.*)/$', save_project_set),
     re_path(r'^project_api_add/(?P<Pid>.*)/$', project_api_add),
     re_path(r'^project_api_del/(?P<id>.*)/$', project_api_del),
     path('save_comment/', save_comment),   # 保存备注comment内容
