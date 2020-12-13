@@ -70,9 +70,36 @@ def test_1(something):
 	print('say {}'.format(something))
 
 
+class F:
+	a = 'luffy'
+
+	def __init__(self, name):
+		self.name = name
+
+	def A(self):
+		print('%s666' % self.name)
+
+
+obj = F('Ronan')
+
+# 检查是否存在某属性，也能检查静态属性
+print(hasattr(obj, 'name'))
+print(hasattr(obj, 'A'))
+
+# 获取属性,包含静态属性
+print(getattr(obj, 'name'))
+getattr(obj, 'A')()
+
+# 设置属性，如果有就改，没有就增
+setattr(obj, 'ACE', '999')
+print(obj.__dict__)  # {'name': 'Ronan', 'ACE': '999'}
+
+# 删除属性(如果不存在该属性则报错)，无法删除静态属性
+delattr(obj, 'name')
+print(obj.__dict__)  # {'ACE': '999'}　
+
 if __name__ == '__main__':
-	xiaoming()
-	test(1)
-	test_1(2)
-
-
+	# xiaoming()
+	# test(1)
+	# test_1(2)
+	pass

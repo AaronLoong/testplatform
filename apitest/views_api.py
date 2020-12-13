@@ -47,19 +47,25 @@ def save_api(request):
 	""" 保存接口调试内容"""
 	api_id = request.GET['api_id']
 	api_name = request.GET['debug_api_name']
-	debug_api_method = request.GET['debug_body_method']
+	debug_api_body_method = request.GET['debug_body_method']
 	debug_url = request.GET['debug_url']
 	debug_host = request.GET['debug_host']
 	debug_header = request.GET['debug_header']
 	debug_method = request.GET['debug_method']
 	debug_api_body = request.GET['debug_api_body']
+	if debug_api_body_method == '返回体':
+		api = Apis.objects.filter(id=api_id)[0]
+		debug_api_body_method = api.last_body_method
+		debug_api_body = api.last_api_body
+	else:
+		debug_api_body = request.GET['debug_api_body']
 	# TODO: 需补充接口请求信息内容校验
 	# 保存数据
 	try:
 		Apis.objects.filter(id=api_id).update(
 			api_name=api_name,
 			api_method=debug_method,
-			api_body_method=debug_api_method,  # 请求体编码方式
+			api_body_method=debug_api_body_method,  # 请求体编码方式
 			api_host=debug_host,
 			api_url=debug_url,
 			api_header=debug_header,
@@ -83,13 +89,23 @@ def send_api(request):
 	""" 调试层发送的请求 """
 	api_id = request.GET['api_id']
 	api_name = request.GET['debug_api_name']
-	debug_api_method = request.GET['debug_body_method']
-	print(debug_api_method)
+	debug_api_body_method = request.GET['debug_body_method']
+	print(debug_api_body_method)
 	debug_url = request.GET['debug_url']
 	debug_host = request.GET['debug_host']
 	debug_header = request.GET['debug_header']
 	debug_method = request.GET['debug_method']
 	debug_api_body = request.GET['debug_api_body']
+	if debug_api_body_method == '返回体':
+		api = Apis.objects.filter(id=api_id)[0]
+		debug_api_method = api.last_body_method
+		debug_api_body = api.last_api_body
+		if debug_api_method in ['', None]:
+			return HttpResponse('请先选择好请求体编码方式和请求体，再点击Send按钮发送请求！')
+	else:
+		debug_api_body = request.GET['debug_api_body']
+		api = Apis.objects.filter(id=api_id)
+		api.update(last_body_method=debug_api_body_method, last_api_body=debug_api_body)
 	# 发送请求获取返回值
 
 	# 将返回值传递给前端页面
