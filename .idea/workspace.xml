@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3c6c9a9-91bf-413d-a8f4-78b24113630c" name="Default Changelist" comment="">
+    <list default="true" id="a3c6c9a9-91bf-413d-a8f4-78b24113630c" name="Default Changelist" comment="新增部分获取接口内容-06">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apitest/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apitest/views_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/views_api.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,8 +67,11 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myIpythonEnabled" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -81,7 +82,7 @@
       <recent name="$PROJECT_DIR$/apitest/static/js" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.utils">
+  <component name="RunManager" selected="Django Server.testplatform">
     <configuration name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="testplatform" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -195,7 +196,9 @@
       <workItem from="1607521088996" duration="653000" />
       <workItem from="1607841375294" duration="2811000" />
       <workItem from="1607868967545" duration="42000" />
-      <workItem from="1607869028872" duration="300000" />
+      <workItem from="1607869028872" duration="751000" />
+      <workItem from="1607930282909" duration="34000" />
+      <workItem from="1607930342490" duration="5034000" />
     </task>
     <task id="LOCAL-00001" summary="testplatform init 01">
       <created>1603020258946</created>
@@ -379,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606979876803</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="新增部分获取接口内容-06">
+      <created>1607870072116</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1607870072116</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,7 +422,8 @@
     <MESSAGE value="新增部分获取接口内容-02" />
     <MESSAGE value="新增部分获取接口内容-03" />
     <MESSAGE value="新增部分获取接口内容-04" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增部分获取接口内容-04" />
+    <MESSAGE value="新增部分获取接口内容-06" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增部分获取接口内容-06" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -434,7 +445,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/testplatform$taobao_air.coverage" NAME="taobao_air Coverage Results" MODIFIED="1603262561867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../.." />
-    <SUITE FILE_PATH="coverage/testplatform$utils.coverage" NAME="utils Coverage Results" MODIFIED="1607864436103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
+    <SUITE FILE_PATH="coverage/testplatform$utils.coverage" NAME="utils Coverage Results" MODIFIED="1607951736506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
     <SUITE FILE_PATH="coverage/testplatform$taobao_air_v1_0.coverage" NAME="taobao_air_v1.0 Coverage Results" MODIFIED="1603446071756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../.." />
     <SUITE FILE_PATH="coverage/testplatform$test.coverage" NAME="test Coverage Results" MODIFIED="1604417986560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest/templates" />
   </component>

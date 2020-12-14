@@ -6,6 +6,7 @@
 @Time: 2020/11/9 10:58 上午
 """
 import json
+import requests
 
 from django.db.utils import OperationalError
 from django.http import HttpResponse
@@ -107,6 +108,45 @@ def send_api(request):
 		api = Apis.objects.filter(id=api_id)
 		api.update(last_body_method=debug_api_body_method, last_api_body=debug_api_body)
 	# 发送请求获取返回值
+	headers = json.loads(debug_header)
+
+	# 拼接完整的URL
+	if debug_host[-1] == '/' and debug_url[0] == '/':  # host与url两端都有/
+		url = debug_host[:-1] + debug_url
+	elif debug_host[-1] != '/' and debug_url[0] != '/':  # host与url两端都没有/
+		url = debug_host + '/' + debug_url
+	else:
+		url = debug_host + debug_url
+
+	# 对请求体编码方式进行校验
+	if debug_api_body_method == 'none':
+		response = requests.request(debug_api_body_method.upper(), url, headers=headers, data={})
+	elif debug_api_body_method == 'form-data':
+		files = []
+		payload = {}
+		for i in eval(debug_api_body):
+			payload[i[0]] = i[1]
+			print('--->' + payload[i[0]])
+		response = requests.request(debug_api_body_method.upper(), url, headers=headers, data=payload, files=files)
+	elif debug_api_body_method == 'x-www-form-urlencoded':
+		headers['Content-Type'] = 'application/x-www-form-urlencoded'
+		payload = {}
+		for i in eval(debug_api_body):
+			payload[i[0]] = i[1]
+			print(payload[i[0]])
+		response = requests.request(debug_api_body_method.upper(), url, headers=headers, data=payload)
+	else:
+		if debug_api_body_method == 'Text':
+			headers['Content-Type'] = 'text/plain'
+		if debug_api_body_method == 'Javascript':
+			headers['Content-Type'] = 'text/plain'
+		if debug_api_body_method == 'Json':
+			headers['Content-Type'] = 'text/plain'
+		if debug_api_body_method == 'Html':
+			headers['Content-Type'] = 'text/plain'
+		if debug_api_body_method == 'Xml':
+			headers['Content-Type'] = 'text/plain'
+		response = requests.request(debug_api_body_method.upper(), url, headers=headers, data=debug_api_body_method.encode('utf-8'))
 
 	# 将返回值传递给前端页面
-	return HttpResponse('{"code":200}')
+	return HttpResponse(response.text)
