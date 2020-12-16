@@ -18,7 +18,7 @@ from apitest.models import *
 def project_api_add(request, Pid):
 	""" 添加项目接口 """
 	project_id = Pid
-	Apis.objects.create(project_id=project_id)  # 未指定字段默认为空或None
+	Apis.objects.create(project_id=project_id, api_method='none')  # 未指定字段默认为空或None
 	return HttpResponseRedirect('/apis/%s' % project_id)
 
 
@@ -91,12 +91,13 @@ def send_api(request):
 	api_id = request.GET['api_id']
 	api_name = request.GET['debug_api_name']
 	debug_api_body_method = request.GET['debug_body_method']
-	print(debug_api_body_method)
 	debug_url = request.GET['debug_url']
 	debug_host = request.GET['debug_host']
 	debug_header = request.GET['debug_header']
+	# TODO：此处数据保存失败，没有传过来
 	debug_method = request.GET['debug_method']
 	debug_api_body = request.GET['debug_api_body']
+	print(debug_api_body)
 	if debug_api_body_method == '返回体':
 		api = Apis.objects.filter(id=api_id)[0]
 		debug_api_method = api.last_body_method
@@ -124,6 +125,7 @@ def send_api(request):
 	elif debug_api_body_method == 'form-data':
 		files = []
 		payload = {}
+		print('请求体--->' + debug_api_body)
 		for i in eval(debug_api_body):
 			payload[i[0]] = i[1]
 			print('--->' + payload[i[0]])

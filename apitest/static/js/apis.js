@@ -105,7 +105,8 @@ function open_debug(id, api_name) {
 
 function cancel_debug(){
 	// 调试的取消功能
-	document.getElementById('debug').style.display = 'none';
+	// document.getElementById('debug').style.display = 'none';
+	document.location.reload();
 }
 
 function clear_debug_content(){
@@ -144,6 +145,25 @@ function save_debug() {
 	let debug_url = document.getElementById('debug_url').value;
 	let debug_host = document.getElementById('debug_host').value;
 	let debug_header = document.getElementById('debug_header').value;
+
+	// 判断顶部的数据是否填写完善
+	if(debug_api_name === ''){
+		alert('请输入接口名称~');
+		return
+	}
+	if(debug_method === ''){
+		alert('请输入请求方式~');
+		return
+	}
+	if(debug_url === ''){
+		alert('请输入请求url~');
+		return
+	}
+	if(debug_host === ''){
+		alert('请输入请求host~');
+		return
+	}
+
 	console.log(
 		'当前请求方式为：' + debug_method,
 		'当前请求接口为：' + debug_url,
@@ -151,7 +171,7 @@ function save_debug() {
 		'当前请求头为：' + debug_header
 	)
 	let debug_body_method = $('ul#myTab li[class=active]')[0].innerText;
-	let debug_api_body = ''
+	// let debug_api_body = ''
 	if (debug_body_method === 'none'){
 		let debug_api_body = ''
 	}
@@ -197,6 +217,7 @@ function save_debug() {
 		let debug_api_body = document.getElementById('raw_Xml').value;
 	}
 	let api_id = document.getElementById('debug_api_id').innerText;  // 获取接口id
+
 	$.get('/save_api/',{
 		'api_id': api_id,
 		'debug_api_name': debug_api_name,
@@ -227,6 +248,20 @@ function debug_send() {
 		'当前请求服务器为：' + debug_host,
 		'当前请求头为：' + debug_header
 	)
+
+	// 判断顶部的数据是否填充完
+	if(debug_method === 'none'){
+		alert('请选择请求方式~');
+		return
+	}
+	if(debug_url === ''){
+		alert('请输入请求url~');
+		return
+	}
+	if(debug_host === ''){
+		alert('请输入请求host~');
+		return
+	}
 	let debug_body_method = $('ul#myTab li[class=active]')[0].innerText;
 	let debug_api_body = ''
 	if (debug_body_method === 'none'){
