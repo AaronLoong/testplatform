@@ -164,6 +164,10 @@ function save_debug() {
 		return
 	}
 
+	// 判断关键数据是否符合规则
+	if(debug_url.slice(0,7) != 'http://' && debug_url.slice()){
+
+	}
 	console.log(
 		'当前请求方式为：' + debug_method,
 		'当前请求接口为：' + debug_url,
@@ -262,7 +266,7 @@ function debug_send() {
 		alert('请输入请求host~');
 		return
 	}
-	let debug_body_method = $('ul#myTab li[class=active]')[0].innerText;
+	let debug_body_method = $('ul#myTab li[class="active"]')[0].innerText;
 	let debug_api_body = ''
 	if (debug_body_method === 'none'){
 		let debug_api_body = ''

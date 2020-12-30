@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3c6c9a9-91bf-413d-a8f4-78b24113630c" name="Default Changelist" comment="新增部分获取接口内容-07">
+    <list default="true" id="a3c6c9a9-91bf-413d-a8f4-78b24113630c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apitest/static/js/apis.js" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/static/js/apis.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apitest/templates/apis.html" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/templates/apis.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apitest/templates/project_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/templates/project_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apitest/views_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/views_api.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +200,8 @@
       <workItem from="1607930282909" duration="34000" />
       <workItem from="1607930342490" duration="7400000" />
       <workItem from="1608001915174" duration="1045000" />
-      <workItem from="1608083497882" duration="2480000" />
+      <workItem from="1608083497882" duration="3283000" />
+      <workItem from="1608725279654" duration="588000" />
     </task>
     <task id="LOCAL-00001" summary="testplatform init 01">
       <created>1603020258946</created>
@@ -401,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607953962546</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="新增前端数据判断内容&amp;修改部分页面展示项">
+      <created>1608129973570</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1608129973570</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,7 +415,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="testplatform init 02" />
     <MESSAGE value="add vue content" />
     <MESSAGE value="testplatform init 05" />
     <MESSAGE value="testplatform init 06 - with some bugs" />
@@ -435,7 +439,8 @@
     <MESSAGE value="新增部分获取接口内容-04" />
     <MESSAGE value="新增部分获取接口内容-06" />
     <MESSAGE value="新增部分获取接口内容-07" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增部分获取接口内容-07" />
+    <MESSAGE value="新增前端数据判断内容&amp;修改部分页面展示项" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增前端数据判断内容&amp;修改部分页面展示项" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
